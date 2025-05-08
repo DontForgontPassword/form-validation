@@ -48,6 +48,12 @@ button {
     text-align: center;
 }
 
+.form__terms-link {
+    display: block;
+
+    margin-top: 5px;
+}
+
 .form__phone-group {
     margin-top: 5px;
 }
@@ -64,7 +70,7 @@ button {
 .form__phone-wrapper {
     display: grid;
     gap: 5px;
-    grid-template-columns: 1fr 60px; /* немного шире для кнопки */
+    grid-template-columns: 1fr 60px;
 }
 
 .form__submit {
