@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Валидация формы</title>
+</head>
+<body>
+<form action="/submit" method="post" class="form">
+    <h1>Форма авторизации</h1>
+    <input class="form__input form__first-name" type="text" placeholder="Имя" name="firstname" required>
+    <input class="form__input form__last-name" type="text" placeholder="Фамилия" name="lastname" required>
+    <input class="form__input form__email" type="email" placeholder="Почта" name="email" required>
+    <input class="form__input form__password" maxlength="30" type="password" name="password" placeholder="Пароль" required>
+    <input class="form__input form__password-confirm" maxlength="30" type="password" name="confirmpassword"
+           placeholder="Повтор пароля" required>
+    <div class="form__phone-group">
+        <label for="form-phone" class="form__label">Номер телефона</label>
+        <div class="form__phone-wrapper">
+            <input type="text" id="form-phone" class="form__input form__phone" name="phone" placeholder="Номер телефона"
+                   required>
+            <button type="button" class="form__phone-button">Код</button>
+        </div>
+    </div>
+    <label for="form-terms" class="form__label form__terms-label">
+        <input type="checkbox" id="form-terms" class="form__terms" name="terms" required>
+        При авторизации вы соглашаетесь с <a href="#" target="_blank">политикой использования</a>
+    </label>
+    <p class="form__message"></p>
+    <button type="submit" class="form__submit">Submit</button>
+</form>
+
+<script src="app.js"></script>
+</body>
+</html>
